@@ -27,6 +27,7 @@ public class main extends ApplicationAdapter {
 	public void render () {
 		ScreenUtils.clear(Color.FOREST);
 
+
 		batch.begin();
 		batch.draw(img, getPosition().x, getPosition().y);
 		batch.end();
