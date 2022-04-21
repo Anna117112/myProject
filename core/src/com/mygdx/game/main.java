@@ -23,10 +23,10 @@ public class main extends ApplicationAdapter {
 		img = new Texture("badlogic.jpg");
 	}
 
-
 	@Override
 	public void render () {
 		ScreenUtils.clear(Color.FOREST);
+
 
 		batch.begin();
 		batch.draw(img, getPosition().x, getPosition().y);
