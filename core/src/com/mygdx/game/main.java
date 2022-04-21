@@ -1,0 +1,41 @@
+package com.mygdx.game;
+
+import static com.mygdx.game.GfxUtils.getPosition;
+
+import com.badlogic.gdx.ApplicationAdapter;
+import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.Input;
+import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.utils.ScreenUtils;
+
+public class main extends ApplicationAdapter {
+	SpriteBatch batch;
+	Texture img;
+
+
+	
+	@Override
+	public void create () {
+
+		batch = new SpriteBatch();
+		img = new Texture("badlogic.jpg");
+	}
+
+
+	@Override
+	public void render () {
+		ScreenUtils.clear(Color.FOREST);
+
+		batch.begin();
+		batch.draw(img, getPosition().x, getPosition().y);
+		batch.end();
+	}
+	
+	@Override
+	public void dispose () {
+		batch.dispose();
+		img.dispose();
+	}
+}
